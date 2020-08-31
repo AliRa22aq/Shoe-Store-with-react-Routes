@@ -1,5 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import { Card } from '@material-ui/core';
+import '../App.css';
+
 
 function ProductsDetail() {
 
@@ -32,12 +35,22 @@ function ProductsDetail() {
     const product = shoes[productID];
     const {name, img, detail} = product;
 
+
+
     return (
         <div>
-            <h4> {name} </h4>
-            <p> {detail}</p>
-            <img src={img} alt={name} style={{height: '500px', width: '0500px'}}/>
-        </div>
+            <ul> 
+            <li>  
+            <Card >
+                    <h4> {name} </h4>
+                    <p> {detail}</p>
+                    <img src={img} alt={name} style={{height: 200, width: '200px'}}/>
+                    </Card> 
+                   
+            </li>
+            </ul>
+            </div>
+
     )
 }
 
