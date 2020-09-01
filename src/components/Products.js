@@ -7,10 +7,8 @@ function Products() {
     return (
         <div>
                     This will remain
-        <Outlet />
+                        <Outlet />
 
-
- 
         </div>
     )
 }
