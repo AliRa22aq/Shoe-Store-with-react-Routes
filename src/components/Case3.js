@@ -30,7 +30,7 @@ const Kids = {
 function Case3() {
     return (
         <div>
-            Girls Shoes
+            Kids Shoes
             <ul> 
             {Object.entries(Kids).map(([productID,{name, img}]) => {
                 return(
