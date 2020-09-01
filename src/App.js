@@ -10,7 +10,6 @@ import Products from './components/Products';
 import ProductsDetail from './components/ProductsDetail';
 import NotFound from './components/NotFound';
 import ProductsIndex from './components/ProductsIndex';
-import VerticalTabs from './components/VerticalTabs'
 import About from './components/About';
 import Case1 from './components/Case1';
 import Case2 from './components/Case2';
@@ -34,7 +33,6 @@ function App() {
            <Route path="/Case4" element={<Case4 />} />
         </Route>
         <Route path="/About" element={<About />} />
-        
         <Route path="*" element={<NotFound />} />
 
       </Routes>
