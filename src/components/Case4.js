@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 
-const shoes = {
+const Accessories = {
 
     "Dunham-Mens-8000-Ubal-Waterproof-Shoes" : {
         name: "Dunham Mens 8000 Ubal Waterproof Lace Up Sneaker Shoes",
@@ -30,7 +30,20 @@ const shoes = {
 function Case4() {
     return (
         <div>
-            Case 4
+            Accessories
+            <ul> 
+            {Object.entries(Accessories).map(([productID,{name, img}]) => {
+                return(
+
+                    <li key={productID}> 
+                                {name}
+                        <img src={img} alt={name} /> 
+                    </li>
+
+                )
+            })}
+            </ul>
+
         </div>
     )
 }
