@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 const Accessories = {
@@ -31,12 +33,12 @@ function Case4() {
         <div>
             Accessories
             <ul> 
-            {Object.entries(Accessories).map(([productID,{name, img}]) => {
+            {Object.entries(Accessories).map(([product4ID,{name, img}]) => {
                 return(
 
-                    <li key={productID}> 
-                                {name}
-                        <img src={img} alt={name} /> 
+                    <li key={product4ID}> 
+                                <Link to = {product4ID} > {name} </Link> 
+                        <img src={img} alt={name} width={200} height={200} /> 
                     </li>
 
                 )
