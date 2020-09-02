@@ -8,7 +8,7 @@ function Products() {
 
     return (
         <div>
-                    <h1 className='heading'> Products that you want!</h1>
+                    <h1 className='heading'> Products that will Amaze you!</h1>
                         <Outlet />
 
         </div>
