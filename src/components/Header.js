@@ -9,7 +9,7 @@ function Header() {
         <Grid container>
             <Grid item xs={1} className = 'headerupper'> 
                 <Link to='/'> 
-                    <img src={LOGO} alt="Shoe" height="70" width="90" /> 
+                    <img src={LOGO} alt="Shoe" height="65" width="80" /> 
                 </Link>
             </Grid>
 
