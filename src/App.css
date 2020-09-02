@@ -2,7 +2,6 @@
 .navbar {
   display: flex;
   list-style-type: none;
-  background-color: #cccccc;
   padding: 1rem;
 
 }
@@ -24,5 +23,13 @@
 }
 
 .heading {
-  align-content: center;
+  text-align: center;
+  background-color: pink;
+}
+
+.header {
+  text-align-last: center;  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+
 }
