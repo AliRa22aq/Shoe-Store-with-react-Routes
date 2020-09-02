@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const boys = {
@@ -31,12 +32,12 @@ function Case1() {
         <div>
             Boys Shoes
             <ul> 
-            {Object.entries(boys).map(([productID,{name, img}]) => {
+            {Object.entries(boys).map(([product1ID,{name, img}]) => {
                 return(
 
-                    <li key={productID}> 
-                                {name}
-                        <img src={img} alt={name} /> 
+                    <li key={product1ID}> 
+                            <Link to = {product1ID} > {name} </Link> 
+                        <img src={img} alt={name} width={200} height={200} /> 
                     </li>
 
                 )
