@@ -10,13 +10,13 @@ const images = [
   {
       caseNo: 1,
     case: 'case1',
-    url: 'https://media2.giphy.com/media/l3q2rCBSrr6D7XKLK/giphy.gif',
+    url: 'https://cdn.lowgif.com/full/1ce8053f63898345-how-to-clean-your-shoes-expert-tips-for-cleaning-leather-suede.gif',
     title: 'Boys Shoes',
     width: '50%',
   },
   {
     case: 'case2',
-    url: 'https://media2.giphy.com/media/l3q2rCBSrr6D7XKLK/giphy.gif',
+    url: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/a6ab2011364769.560f680c40dd7.gif',
     title: 'Girls Shoes',
     width: '50%',
   },
@@ -28,8 +28,8 @@ const images = [
   },
   {
     case: 'case4',
-    url: 'https://media2.giphy.com/media/l3q2rCBSrr6D7XKLK/giphy.gif',
-    title: 'Accessaries',
+    url: 'https://www.unisock.co.uk/media/wysiwyg/GIF/Mix-match-1.gif',
+    title: 'Socks',
     width: '50%',
   },
 
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     position: 'relative',
-    height: 250,
+    height: 400,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
       height: 100,
