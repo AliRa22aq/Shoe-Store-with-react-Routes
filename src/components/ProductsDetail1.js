@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Card } from '@material-ui/core';
 import '../App.css';
@@ -30,9 +30,6 @@ function ProductsDetail1() {
         },
 
     }
-    
-
-
 
     const {product1ID} = useParams();
 
