@@ -44,3 +44,52 @@
   font-weight: bolder;
 
 }
+
+.ShoeTitle{
+  align-items: center;
+  align-content: center;
+  text-align-last: center;
+  ruby-align: center;
+  vertical-align: 2rem;
+  text-align: center;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+
+}
+
+a:hover {
+  color: hotpink;
+  text-decoration: none;
+
+}
+
+.ShoePrice {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+.writing {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3.9rem;
+text-transform: uppercase;
+padding: 1.5rem 2.1rem;
+background-color: pink;
+
+}
+
+.mainImage{
+  padding: 0rem 0rem 0rem 0rem;
+
+}
+
+
