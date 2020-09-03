@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Paper from '@material-ui/core/Paper';
+import { Grid } from '@material-ui/core';
+
 
 
 const boys = {
@@ -31,18 +34,30 @@ function Case1() {
     return (
         <div>
             Boys Shoes
-            <ul> 
+
+            <Grid container> 
+            <Grid item xs = {2}> List of items </Grid>     
+            <Grid item xs = {10}>  
+            <Grid container>      
             {Object.entries(boys).map(([product1ID,{name, img}]) => {
                 return(
 
-                    <li key={product1ID}> 
+                    
+                    <Grid item xs={3}> 
+                    <Paper key={product1ID} elevation= {0}> 
                             <Link to = {product1ID} > {name} </Link> 
                         <img src={img} alt={name} width={200} height={200} /> 
-                    </li>
-
+        
+                    </Paper>
+                    </Grid>
                 )
             })}
-            </ul>
+            </Grid>
+            </Grid>
+
+
+            </Grid>
+        
 
         </div>
     )
