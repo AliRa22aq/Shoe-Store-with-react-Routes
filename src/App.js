@@ -22,15 +22,18 @@ import Case4 from './components/Case4';
 import NotFound from './components/NotFound';
 import ProductsIndex from './components/ProductsIndex';
 import About from './components/About';
-
-
+import { CartProvider } from './components/CartContext';
 
 
 function App() {
   return (
+
+ 
     <div>
-      <Header />
-      
+
+<CartProvider >
+
+      <Header />      
       <Routes> 
         <Route path="/" element={<Home />} />
         <Route path="Products" element={<Products />}> 
@@ -48,6 +51,10 @@ function App() {
         <Route path="*" element={<NotFound />} />
 
       </Routes>
+
+      
+      </CartProvider>
+
     </div>
   );
 }
