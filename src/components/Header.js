@@ -3,8 +3,11 @@ import { NavLink, Link } from 'react-router-dom'
 import '../App.css';
 import { Grid } from '@material-ui/core';
 import LOGO from './url/LOGO.jpg'
+import Cart from './Cart';
+
 
 function Header() {
+
     return (
         <Grid container>
             <Grid item xs={1} className = 'headerupper'> 
@@ -15,7 +18,7 @@ function Header() {
 
             <Grid item xs={10} className = 'headerupper'> THE SHOE STORE</Grid>
             
-            <Grid item xs={12} className = 'header'> 
+    <Grid item xs={10} className = 'header'> 
         <nav className = 'navbar' >
             <div > 
             <NavLink to="/" as='li' >  Home  </NavLink> |
@@ -26,8 +29,10 @@ function Header() {
             <NavLink to="/About" as='li'> About Developer </NavLink>
             </div>
         </nav>
-        </Grid>
-        </Grid>
+    </Grid>
+    <Grid item xs={2}> <Cart /> </Grid>
+
+</Grid>
     )
 }
 
