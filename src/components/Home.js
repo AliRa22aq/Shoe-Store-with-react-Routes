@@ -12,9 +12,10 @@ function Home() {
             <Grid container > 
             <Grid item xs={3} className='writing'> 
             A place Where you Fall in Love with Shoes <br />
-            <Button variant="outlined" className='button' > Products </Button>
+            <Button variant="outlined"  > Products </Button>
+
             </Grid>
-            <Grid item xs={9}> <img src={image}  height={600} width={1010} />   </Grid>
+            <Grid item xs={9}> <img src={image} className=' mainImage'/>   </Grid>
             </Grid>
             
         </div>
