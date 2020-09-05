@@ -8,6 +8,8 @@ import Cart from './Cart';
 
 function Header() {
 
+    
+
     return (
         <Grid container>
             <Grid item xs={1} className = 'headerupper'> 
@@ -18,9 +20,9 @@ function Header() {
 
             <Grid item xs={10} className = 'headerupper'> THE SHOE STORE</Grid>
             
-    <Grid item xs={10} className = 'header'> 
+    <Grid item xs={11} > 
         <nav className = 'navbar' >
-            <div > 
+            <div className = 'header'> 
             <NavLink to="/" as='li' >  Home  </NavLink> |
             <NavLink to="/Products" as='li'> Products </NavLink> |
             <NavLink to="/Products/Case1" as='li'> Boys </NavLink> |
@@ -30,7 +32,10 @@ function Header() {
             </div>
         </nav>
     </Grid>
-    <Grid item xs={2}> <Cart /> </Grid>
+    <Grid item xs={1}>
+    <Link to='/Cart'>  <Cart /> </Link>   
+    </Grid>
+
 
 </Grid>
     )
