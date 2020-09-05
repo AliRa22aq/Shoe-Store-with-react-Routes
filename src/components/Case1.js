@@ -3,7 +3,7 @@ import {CartContext} from './CartContext';
 import { Link } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import { Grid, Button } from '@material-ui/core';
-import Remove from './CartWindow'
+import '../App.css';
 
 
 const boys = {
@@ -53,36 +53,45 @@ function Case1() {
     
     return (
         <div>
-            Boys Shoes
+             <Grid className = 'detailhead' container> <h4> Boys Shoes </h4> </Grid>
+            
 
-            <Grid container>      
+            <Grid container>  
+            
             {Object.entries(boys).map(([product1ID,{name, img, price}], kye) => {
                                         
                 return(
- 
-                    <Grid item xs={4}> 
-                    <Link to = {product1ID}  > 
 
-                    
+                       
+                    <Grid item xs={4}> 
+
+                    <div className = 'card'>  
+                    <Link to = {product1ID}  > 
                     <Paper key={product1ID} elevation= {0} > 
                             
                         <img src={img} alt={name} width={300} height={300} /> <br />
                         <Link to = {product1ID} >   {name}  </Link> <br />
                         <div className= 'ShoePrice'> ${price} </div>
-                        
-                        
+
                     </Paper>
                     </Link> 
-                     <Button variant="outlined" onClick = {() => {setCart(a => [...a, {"name": name, 'price': price}])}} > 
+                    </div>
+
+                    <div className='button'> 
+                     <Button variant="outlined" onClick = {() => {setCart(a => [...a, {"name": name, 'price': price, 'image': img}])}} > 
                      Add to Cart
                      </Button>
-                    
+                     </div>
+
                     </Grid>
                 )
             })}
+            
             </Grid>
         </div>
     )
+        
+
 }
 
 export default Case1
