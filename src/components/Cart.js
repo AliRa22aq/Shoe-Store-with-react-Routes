@@ -16,7 +16,7 @@ function Cart() {
 
     return (
         <div style={{fontSize: 15}} >
-            <LocalGroceryStoreIcon/> {'('} {Cart.length} {')'} | ${totalPrice}
+            <LocalGroceryStoreIcon/> {'('} {Cart.length} {')'}
         </div>
     )
 
