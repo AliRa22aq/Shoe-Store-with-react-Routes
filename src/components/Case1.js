@@ -3,6 +3,7 @@ import {CartContext} from './CartContext';
 import { Link } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import { Grid, Button } from '@material-ui/core';
+import Remove from './CartWindow'
 
 
 const boys = {
@@ -47,18 +48,19 @@ const boys = {
 
 
 function Case1() {
-    const [C, setC] = useContext(CartContext);
+    const [Cart, setCart] = useContext(CartContext);
+
     
     return (
         <div>
             Boys Shoes
 
             <Grid container>      
-            {Object.entries(boys).map(([product1ID,{name, img, price}]) => {
+            {Object.entries(boys).map(([product1ID,{name, img, price}], kye) => {
                                         
                 return(
  
-                    <Grid item xs={4} className= 'ShoeTitle'> 
+                    <Grid item xs={4}> 
                     <Link to = {product1ID}  > 
 
                     
@@ -71,7 +73,10 @@ function Case1() {
                         
                     </Paper>
                     </Link> 
-                     <Button variant="outlined" onClick={() => {setC(a => [...a,[{name: {name}, price: {price}}]])}} > Add to Cart </Button>
+                     <Button variant="outlined" onClick = {() => {setCart(a => [...a, {"name": name, 'price': price}])}} > 
+                     Add to Cart
+                     </Button>
+                    
                     </Grid>
                 )
             })}
