@@ -1,17 +1,23 @@
-import React from 'react'
+import React, {useState, useContext} from 'react'
+import {CartContext} from './CartContext';
 import { useParams } from 'react-router-dom'
 import { Card } from '@material-ui/core';
-import '../App.css';
+import { Grid, Button } from '@material-ui/core';
 
+import '../App.css';
+import Typography from '@material-ui/core/Typography';
 
 function ProductsDetail1() {
+
+    const [Cart, setCart] = useContext(CartContext);
+
 
     const Bshoes = {
 
         "Dunham-Mens-8000-Ubal-Waterproof-Shoes" : {
             name: "Dunham Mens 8000 Ubal Waterproof Lace Up Sneaker Shoes",
             img: "https://ak1.ostkcdn.com/images/products/30756882/Dunham-Mens-8000-Ubal-Waterproof-Lace-Up-Sneaker-Shoes-72fe64fd-778e-4e69-a9a8-ce3d254cfc42.jpg",
-            detail: "This is the detail of the product  11111",
+            detail: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             price: 100
         },
         "Lugz-Men-Zrocs-DX-Oxford-Sneaker" : {
@@ -51,21 +57,48 @@ function ProductsDetail1() {
     const {product1ID} = useParams();
 
     const product = Bshoes[product1ID];
-    const {name, img, detail} = product;
+    const {name, img, price, detail} = product;
     
 
     return (
         <div>
-            <ul> 
-            <li>  
-            <Card >
-                    <h4> {name} </h4>
-                    <p> {detail}</p>
-                    <img src={img} alt={name} style={{height: 200, width: '200px'}}/>
-                    </Card> 
+
+<Card >
+
+    <Grid container >  
+
+                   <Grid className = 'detailhead' container> <h4> {name} </h4> </Grid>
+                 
+
+                   <Grid className='detalphoto' item xs = {6}> <img src={img} alt={name} style={{height: 500, width: 500}}/></Grid>
+
+
+                   <Grid  item xs = {6} > 
+
+                    
                    
-            </li>
-            </ul>
+                   <Grid item xs = {12}> 
+                   <Typography className='detail' variant="subtitle1" gutterBottom>
+                       
+                     {detail}    
+
+                    </Typography>
+
+                    <div className = 'button'> 
+                    <Button variant="outlined" onClick = {() => {setCart(a => [...a, {"name": name, 'price': price}])}} > 
+                     Add to Cart
+                    </Button>
+                    </div>
+
+                    </Grid>
+                  
+                   </Grid> 
+                   
+                  
+
+    </Grid>
+ </Card> 
+
             </div>
 
     )
