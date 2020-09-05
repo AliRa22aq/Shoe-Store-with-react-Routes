@@ -2,9 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-//import Background1 from './url/shoe.gif'
-//import Background2 from './url/shoe2.gif'
-
 import { Link } from 'react-router-dom';
 
 
