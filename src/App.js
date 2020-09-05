@@ -24,6 +24,7 @@ import ProductsIndex from './components/ProductsIndex';
 import About from './components/About';
 import { CartProvider } from './components/CartContext';
 import CartWindow from './components/CartWindow';
+import Footer from './components/Footer'
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
         
 
       </Routes>
+      <Footer />
 
       
       </CartProvider>
