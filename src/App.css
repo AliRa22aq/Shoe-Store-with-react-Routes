@@ -77,9 +77,11 @@ a:hover {
 }
 
 .ShoePrice {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-shadow: teal;
 }
 
 .writing {
@@ -142,3 +144,58 @@ text-justify: auto;
   width: 200;
 
 }
+
+.card {
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  display: flex; 
+  justify-content: center; 
+  align-self: center;
+  text-justify: auto;
+  text-align: center;
+
+}
+
+.carttext{
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5rem 2rem;
+  display: flex; 
+  justify-content: center; 
+  align-self: center;
+  text-justify: auto;
+  text-align: center;
+
+}
+
+.cartprice{
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding-top: 7rem ;
+  padding-left: 4rem ;
+  display: flex; 
+}
+
+.cartbutton {
+  padding: 3rem ;
+  align-self: center;
+}
+.carttotal{
+  background-color: whitesmoke;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 2rem 2rem;
+  display: flex; 
+  justify-content: center; 
+  align-self: center;
+  text-justify: auto;
+  text-align: center;
+}
+.checkout {
+  padding: 3rem ;
+  align-self: center;
+  align-content: center;
+  display: flex; 
+  align-items: center;
+}
+
