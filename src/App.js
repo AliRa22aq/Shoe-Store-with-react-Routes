@@ -23,6 +23,7 @@ import NotFound from './components/NotFound';
 import ProductsIndex from './components/ProductsIndex';
 import About from './components/About';
 import { CartProvider } from './components/CartContext';
+import CartWindow from './components/CartWindow';
 
 
 function App() {
@@ -32,9 +33,10 @@ function App() {
     <div>
 
 <CartProvider >
-
-      <Header />      
+      <Header />
       <Routes> 
+      
+        <Route path='/Cart' element ={<CartWindow />} />      
         <Route path="/" element={<Home />} />
         <Route path="Products" element={<Products />}> 
            <Route path="/" element={<ProductsIndex />} /> 
