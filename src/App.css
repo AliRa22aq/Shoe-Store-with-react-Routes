@@ -29,11 +29,14 @@
 }
 
 .header {
-align-items: center;  
-align-self: center;
-text-align: center;
+
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  display: flex; 
+  justify-content: center; 
+  align-self: center;
+  display: "flex";
+  align-items: center;
 
 }
 .headerupper {
@@ -103,13 +106,39 @@ background-color: lightblue;
   align-items: center;
 }
 
-.foot {
-  
-}
 
 .button {
-  display: flex; justify-content: center; 
+  display: flex; 
+  justify-content: center; 
   align-self: center;
-  display: "flex";
   align-items: center;
+}
+
+.detailhead{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem;
+text-transform: capitalize;
+padding: 0rem 3rem;
+background-color: whitesmoke;
+display: flex; 
+justify-content: center; 
+align-self: center;
+text-justify: center;
+}
+
+.detail {
+  font-size: 0.2rem;
+padding: 5rem 2rem;
+display: flex; 
+justify-content: center; 
+align-self: center;
+text-justify: auto;
+}
+
+.detalphoto {
+  padding: 0rem 5rem ;
+  display: flexbox;
+  height: 200;
+  width: 200;
+
 }
