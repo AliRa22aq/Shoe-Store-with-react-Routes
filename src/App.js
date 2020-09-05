@@ -51,6 +51,7 @@ function App() {
         </Route>
         <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFound />} />
+        
 
       </Routes>
 
