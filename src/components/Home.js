@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Link } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import image from './url/comp-1.gif'
 import Button from '@material-ui/core/Button';
 import { NavLink } from 'react-router-dom';
@@ -21,7 +21,7 @@ function Home() {
             </div> 
 
             </Grid>
-            <Grid item xs={9}> <img src={image} className=' mainImage'/>   </Grid>
+            <Grid item xs={9}> <img src={image} alt="Img" className=' mainImage'/>   </Grid>
             </Grid>
             
         </div>
