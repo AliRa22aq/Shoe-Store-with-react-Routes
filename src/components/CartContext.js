@@ -7,7 +7,7 @@ export const CartProvider = (props) => {
     const [Cart, setCart] = useState([])
 
 return (
-    <CartContext.Provider value = {[Cart, setCart]}>
+    <CartContext.Provider value = {[Cart, setCart]} >
 
     {props.children}
 
