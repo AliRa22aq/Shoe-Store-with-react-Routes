@@ -40,6 +40,8 @@ const Kids = {
 
 function Case3() {
     const [Cart, setCart] = useContext(CartContext);
+    setCart(Cart)
+
 
     
     return (
