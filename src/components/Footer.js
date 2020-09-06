@@ -9,8 +9,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 const useStyles = makeStyles((theme) => ({
     container: {
         width: '100%',
-        marginTop: '5px',
-        marginBottom: '5px',
+        padding: '1rem',
         textAlign: 'center',
     },
     footer: {
@@ -30,9 +29,9 @@ const Footer = () => {
             <footer className={classes.footer}>
                 <Container maxWidth="sm">
                     <Typography variant="body1" color="primary">
-                        
+                        Created by:{' '}
                         <Link className={classes.linkColor} href="https://github.com/AliRa22aq" target="_blank" rel="noopener noreferrer">
-                        Created by: {' '}Ali Razzaq {'  '} <GitHubIcon />
+                         Ali Razzaq {'  '} <GitHubIcon />
                         </Link> 
                     </Typography>
 
