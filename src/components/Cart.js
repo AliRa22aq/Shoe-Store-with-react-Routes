@@ -7,11 +7,6 @@ function Cart() {
 
     const [Cart] = useContext(CartContext);
 
-
-    var priceData = Cart.map((item) => {
-        return( item.price)
-    })
-
     //const totalPrice = priceData.reduce((acc, curr) => acc+curr, 0);
 
     return (
