@@ -11,6 +11,8 @@
     
         const [Cart, setCart] = useContext(CartContext);
     
+        setCart(Cart)
+
         const Socks = {
 
             "Men-Nike-Lightweight" : {
