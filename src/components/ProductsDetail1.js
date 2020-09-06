@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 function ProductsDetail1() {
 
     const [Cart, setCart] = useContext(CartContext);
+    setCart(Cart)
+
 
 
     const Bshoes = {
