@@ -3,7 +3,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import GitHubIcon from '@material-ui/icons/GitHub';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +30,7 @@ const Footer = () => {
                     <Typography variant="body1" color="primary">
                         Created by:{' '}
                         <Link className={classes.linkColor} href="https://github.com/AliRa22aq" target="_blank" rel="noopener noreferrer">
-                         Ali Razzaq {'  '} <GitHubIcon />
+                         Ali Razzaq {'  '} 
                         </Link> 
                     </Typography>
 
