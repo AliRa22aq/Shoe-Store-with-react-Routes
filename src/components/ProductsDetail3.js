@@ -10,6 +10,8 @@
     function ProductsDetail3() {
     
         const [Cart, setCart] = useContext(CartContext);
+        setCart(Cart)
+
     
         const Kshoes = {
 
