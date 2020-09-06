@@ -1,8 +1,7 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import {CartContext} from './CartContext';
 import { useParams } from 'react-router-dom'
-import { Card } from '@material-ui/core';
-import { Grid, Button } from '@material-ui/core';
+import { Grid, Button, Card } from '@material-ui/core';
 import '../App.css';
 import Typography from '@material-ui/core/Typography';
 
@@ -58,8 +57,9 @@ function ProductsDetail1() {
     const product = Bshoes[product1ID];
     const {name, img, price, detail} = product;
     
-
     return (
+
+        
         <div>
 
 <Card >
