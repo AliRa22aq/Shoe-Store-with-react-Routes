@@ -1,52 +1,81 @@
-import React from 'react';
+import React, {useState, useContext} from 'react'
+import {CartContext} from './CartContext';
 import { Link } from 'react-router-dom';
+import Paper from '@material-ui/core/Paper';
+import { Grid, Button } from '@material-ui/core';
+import '../App.css';
 
 
+const Socks = {
 
-const Accessories = {
+    "Men-Nike-Lightweight" : {
+        name: "Men Nike Lightweight",
+        img: "https://www.aeelectricalinc.com/images/large/Fashion_Style/Men%20Nike%20Lightweight%203%20Pack%20Sock%20Black%20White%20Grey%20-%20Nike%20Men%20Socks%20Sale%20C33b3409%20138_LRG.jpg",
+        detail: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        price: 100
 
-    "Dunham-Mens-8000-Ubal-Waterproof-Shoes" : {
-        name: "Dunham Mens 8000 Ubal Waterproof Lace Up Sneaker Shoes",
-        img: "https://ak1.ostkcdn.com/images/products/30756882/Dunham-Mens-8000-Ubal-Waterproof-Lace-Up-Sneaker-Shoes-72fe64fd-778e-4e69-a9a8-ce3d254cfc42.jpg",
-        detail: "This is the detail of the product"
     },
-    "Lugz-Men-Zrocs-DX-Oxford-Sneaker" : {
-        name: "Lugz Men's Zrocs DX Oxford Sneaker",
-        img: "https://ak1.ostkcdn.com/images/products/22897350/Zrocs-DX-42c19146-ec9d-4925-9868-abd8a0aa2bb3.jpg",
-        detail: "This is the detail of the product"
+    "Woowan-DX-Oxfor-Socks" : {
+        name: "Woowan DX Oxford Socks",
+        img: "https://ae01.alicdn.com/kf/HTB1lGKFOpXXXXaZaXXXq6xXFXXXz/Men-Sock-10-pieces-5-Pairs-lot-Package-Male-Summer-Light-Socks-Stripe-Cotton-Short-Sock.jpg_480x480xz.jpg",
+        detail: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        price: 100
+
     },
-    "Vance-Co.-Men-Riggin-Athleisure-Elastic-Sneakers" : {
-        name: "Vance Co. Men's 'Riggin' Athleisure Elastic Quick Lace Casual Sneakers",
-        img: "https://ak1.ostkcdn.com/images/products/17011753/Vance-Co.-Mens-Riggin-Athleisure-Elastic-Quick-Lace-Casual-Sneakers-03572354-28ed-4fab-a881-96fb6c35a8f6_600.jpg",
-        detail: "This is the detail of the product"
-    },
-    "Prince-Mens-NFS-Attack-Squash-Sneakers" : {
-        name: "Prince Mens NFS Attack Squash Sneakers",
-        img: "https://ak1.ostkcdn.com/images/products/19892982/Prince-Mens-NFS-Attack-Squash-Sneakers-493dd13e-19e3-427b-a07b-3313483d7570_600.jpg",
-        detail: "This is the detail of the product"
+    "Nik-Trainings-most-basic" : {
+        name: "Nike Training's most basic",
+        img: "https://cache.mrporter.com/variants/images/5983760398201134/in/w2000_q80.jpg",
+        detail: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        price: 100
     },
 
 }
 
 function Case4() {
+    const [Cart, setCart] = useContext(CartContext);
+
+    
     return (
         <div>
-            Accessories
-            <ul> 
-            {Object.entries(Accessories).map(([product4ID,{name, img}]) => {
+             <Grid className = 'detailhead' container> <h4> Socks </h4> </Grid>
+            
+
+            <Grid container>  
+            
+            {Object.entries(Socks).map(([product4ID,{name, img, price}], kye) => {
+                                        
                 return(
 
-                    <li key={product4ID}> 
-                                <Link to = {product4ID} > {name} </Link> 
-                        <img src={img} alt={name} width={200} height={200} /> 
-                    </li>
+                       
+                    <Grid item xs={4}> 
 
+                    <div className = 'card'>  
+                    <Link to = {product4ID}  > 
+                    <Paper key={product4ID} elevation= {0} > 
+                            
+                        <img src={img} alt={name} width={300} height={300} /> <br />
+                        <Link to = {product4ID} >   {name}  </Link> <br />
+                        <div className= 'ShoePrice'> ${price} </div>
+
+                    </Paper>
+                    </Link> 
+                    </div>
+
+                    <div className='button'> 
+                     <Button variant="outlined" onClick = {() => {setCart(a => [...a, {"name": name, 'price': price, 'image': img}])}} > 
+                     Add to Cart
+                     </Button>
+                     </div>
+
+                    </Grid>
                 )
             })}
-            </ul>
-
+            
+            </Grid>
         </div>
     )
+        
+
 }
 
 export default Case4
