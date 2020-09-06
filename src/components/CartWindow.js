@@ -41,7 +41,7 @@ function CartWindow() {
                     
                     <div className='cartbutton'>
                     <Button variant="outlined" onClick={() => {setCart(Cart.filter((a) => {return ( a.name!==val.name)} ))}} > Delete from Cart </Button>
-
+    
                     </div>
                     </Grid > 
                         
