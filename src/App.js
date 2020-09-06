@@ -36,7 +36,8 @@ function App() {
 <CartProvider >
       <Header />
       <Routes> 
-      
+  
+        <Route path="/About" element={<About />} />      
         <Route path='/Cart' element ={<CartWindow />} />      
         <Route path="/" element={<Home />} />
         <Route path="Products" element={<Products />}> 
@@ -50,7 +51,6 @@ function App() {
            <Route path="/Case4" element={<Case4 />} />
            <Route path="/Case4/:product4ID" element={<ProductsDetail4 />} />
         </Route>
-        <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFound />} />
         
 
