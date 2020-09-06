@@ -33,6 +33,8 @@ const Socks = {
 
 function Case4() {
     const [Cart, setCart] = useContext(CartContext);
+    setCart(Cart)
+
 
     
     return (
