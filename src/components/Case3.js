@@ -1,51 +1,88 @@
-import React from 'react';
+import React, {useState, useContext} from 'react'
+import {CartContext} from './CartContext';
 import { Link } from 'react-router-dom';
-
+import Paper from '@material-ui/core/Paper';
+import { Grid, Button } from '@material-ui/core';
+import '../App.css';
 
 const Kids = {
 
-    "Dunham-Mens-8000-Ubal-Waterproof-Shoes" : {
-        name: "Dunham Mens 8000 Ubal Waterproof Lace Up Sneaker Shoes",
-        img: "https://ak1.ostkcdn.com/images/products/30756882/Dunham-Mens-8000-Ubal-Waterproof-Lace-Up-Sneaker-Shoes-72fe64fd-778e-4e69-a9a8-ce3d254cfc42.jpg",
-        detail: "This is the detail of the product"
+    "Girls-Sports-Shoe-301-Red" : {
+        name: "Sports Shoes 301 - Red",
+        img: "https://cdn.shopify.com/s/files/1/0081/3504/9293/products/301_2_480x.jpg?v=1578487460",
+        detail: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        price: 100
+
     },
-    "Lugz-Men-Zrocs-DX-Oxford-Sneaker" : {
-        name: "Lugz Men's Zrocs DX Oxford Sneaker",
-        img: "https://ak1.ostkcdn.com/images/products/22897350/Zrocs-DX-42c19146-ec9d-4925-9868-abd8a0aa2bb3.jpg",
-        detail: "This is the detail of the product"
+    "Sports-Shoes-102-Green" : {
+        name: "Girls Sports Shoes 102 - Sea Green",
+        img: "https://cdn.shopify.com/s/files/1/0081/3504/9293/products/102_1_650d757d-6059-4ffa-a128-92d83bfd9bcc_480x.jpg?v=1578487002",
+        detail: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        price: 100
+
     },
-    "Vance-Co.-Men-Riggin-Athleisure-Elastic-Sneakers" : {
-        name: "Vance Co. Men's 'Riggin' Athleisure Elastic Quick Lace Casual Sneakers",
-        img: "https://ak1.ostkcdn.com/images/products/17011753/Vance-Co.-Mens-Riggin-Athleisure-Elastic-Quick-Lace-Casual-Sneakers-03572354-28ed-4fab-a881-96fb6c35a8f6_600.jpg",
-        detail: "This is the detail of the product"
+    "Girls-Sports-Shoes-102-Sky-Blue" : {
+        name: "Girls Sports Shoes 102 - Sky Blue",
+        img: "https://cdn.shopify.com/s/files/1/0081/3504/9293/products/102_2_cb728a20-f611-4be2-bfa1-2c736ff843ae_480x.jpg?v=1578487200",
+        detail: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        price: 100
+
     },
-    "Prince-Mens-NFS-Attack-Squash-Sneakers" : {
-        name: "Prince Mens NFS Attack Squash Sneakers",
-        img: "https://ak1.ostkcdn.com/images/products/19892982/Prince-Mens-NFS-Attack-Squash-Sneakers-493dd13e-19e3-427b-a07b-3313483d7570_600.jpg",
-        detail: "This is the detail of the product"
+    "Comfortable-Black-Slippers-For-Kids" : {
+        name: "Comfortable Black Slippers For Kids",
+        img: "https://d11zer3aoz69xt.cloudfront.net/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/a/s/asaan_buy_comfortable_black_slippers_for_kids_to-0017-y_.jpg",
+        detail: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        price: 100
+
     },
 
 }
 
 function Case3() {
+    const [Cart, setCart] = useContext(CartContext);
+
+    
     return (
         <div>
-            Kids Shoes
-            <ul> 
-            {Object.entries(Kids).map(([product3ID,{name, img}]) => {
+             <Grid className = 'detailhead' container> <h4> Kids Shoes </h4> </Grid>
+            
+
+            <Grid container>  
+            
+            {Object.entries(Kids).map(([product3ID,{name, img, price}], kye) => {
+                                        
                 return(
 
-                    <li key={product3ID}> 
-                                <Link to = {product3ID} > {name} </Link> 
-                        <img src={img} alt={name} width={200} height={200}/> 
-                    </li>
+                       
+                    <Grid item xs={4}> 
 
+                    <div className = 'card'>  
+                    <Link to = {product3ID}  > 
+                    <Paper key={product3ID} elevation= {0} > 
+                            
+                        <img src={img} alt={name} width={300} height={300} /> <br />
+                        <Link to = {product3ID} >   {name}  </Link> <br />
+                        <div className= 'ShoePrice'> ${price} </div>
+
+                    </Paper>
+                    </Link> 
+                    </div>
+
+                    <div className='button'> 
+                     <Button variant="outlined" onClick = {() => {setCart(a => [...a, {"name": name, 'price': price, 'image': img}])}} > 
+                     Add to Cart
+                     </Button>
+                     </div>
+
+                    </Grid>
                 )
             })}
-            </ul>
-
+            
+            </Grid>
         </div>
     )
+        
+
 }
 
 export default Case3
