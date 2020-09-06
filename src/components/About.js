@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Button } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import profile from './url/profile.jpg'
 import Typography from '@material-ui/core/Typography';
 
