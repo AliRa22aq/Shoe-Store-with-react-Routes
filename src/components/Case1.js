@@ -48,7 +48,8 @@ const boys = {
 
 
 function Case1() {
-    const setCart = useContext(CartContext);
+    const [Cart, setCart] = useContext(CartContext);
+
 
     
     return (
