@@ -5,14 +5,14 @@ import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 
 function Cart() {
 
-    const [Cart, setCart] = useContext(CartContext);
+    const [Cart] = useContext(CartContext);
 
 
     var priceData = Cart.map((item) => {
         return( item.price)
     })
 
-    const totalPrice = priceData.reduce((acc, curr) => acc+curr, 0);
+    //const totalPrice = priceData.reduce((acc, curr) => acc+curr, 0);
 
     return (
         <div style={{fontSize: 15}} >
