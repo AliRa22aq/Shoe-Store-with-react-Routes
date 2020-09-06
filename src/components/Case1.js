@@ -78,9 +78,8 @@ function Case1() {
                     </div>
 
                     <div className='button'> 
-                     <Button variant="outlined" onClick = {() => {setCart(a => [...a, {"name": name, 'price': price, 'image': img}])}} > 
-                     Add to Cart
-                     </Button>
+                     <Button variant="outlined" onClick = {() => {setCart(a => [...a, {"name": name, 'price': price, 'image': img}])}} > Add to Cart  </Button>
+
                      </div>
 
                     </Grid>
