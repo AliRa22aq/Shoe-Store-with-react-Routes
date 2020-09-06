@@ -4,16 +4,13 @@ import { Button, Grid, Paper, Link } from '@material-ui/core';
 import '../App.css';
 
 
-
-
 function CartWindow() {
     const [Cart, setCart] = useContext(CartContext);
+
 
     var priceData = Cart.map((item) => {return( item.price)})
     var TotalPrice = priceData.reduce((acc, curr) => acc+curr, 0);
 
-    console.log(Cart)
-    
         
     return (
         <div>
@@ -43,9 +40,10 @@ function CartWindow() {
                     </Grid>
                     
                     <div className='cartbutton'>
-                    <Button variant="outlined" onClick={() => {setCart(Cart.filter((a) => {return ( a.name!=val.name)} ))}} > 
-                    Delete from Cart 
-                    </Button>
+                    <Button variant="outlined" onClick={() => {setCart(Cart.filter((a) => {return ( a.name!=val.name)} ))}} > Delete from Cart </Button>
+                    <Button variant="outlined" onClick={() => {setCart(a => [...a, {val}])}} > + </Button>
+
+
                     </div>
                     </Grid > 
                         
@@ -67,8 +65,8 @@ function CartWindow() {
             
   
             <Grid item xs={11}>   </Grid>   
-            <Grid item xs={1}> <Button> Check Out </Button>  </Grid>   
-
+            <Grid item xs={1}> <Button onClick = {() => {setCart([]); alert("Thanks for Shoping from here")}} > Check Out </Button>  </Grid>   
+           
 
             </div>
            </Paper>
