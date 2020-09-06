@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 
 function ProductsDetail1() {
 
-    const [setCart] = useContext(CartContext);
+    const [Cart, setCart] = useContext(CartContext);
 
 
     const Bshoes = {
