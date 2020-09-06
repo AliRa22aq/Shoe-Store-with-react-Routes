@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import {CartContext} from './CartContext';
 import { Link } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
@@ -36,7 +36,7 @@ const Girls = {
 }
 
 function Case2() {
-    const [Cart, setCart] = useContext(CartContext);
+    const [setCart] = useContext(CartContext);
 
     
     return (
