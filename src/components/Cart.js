@@ -5,7 +5,8 @@ import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 
 function Cart() {
 
-    const [Cart] = useContext(CartContext);
+    const [Cart, setCart] = useContext(CartContext);
+    setCart(Cart)
 
     //const totalPrice = priceData.reduce((acc, curr) => acc+curr, 0);
 
