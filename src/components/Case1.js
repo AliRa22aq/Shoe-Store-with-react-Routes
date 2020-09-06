@@ -49,6 +49,7 @@ const boys = {
 
 function Case1() {
     const [Cart, setCart] = useContext(CartContext);
+    const length = Cart.length;
 
 
     
