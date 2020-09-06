@@ -9,7 +9,7 @@
     
     function ProductsDetail3() {
     
-        const [Cart, setCart] = useContext(CartContext);
+        const [setCart] = useContext(CartContext);
     
         const Kshoes = {
 
