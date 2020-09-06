@@ -1,6 +1,6 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import {CartContext} from './CartContext';
-import { Button, Grid, Paper, Link } from '@material-ui/core';
+import { Button, Grid, Paper } from '@material-ui/core';
 import '../App.css';
 
 
@@ -40,7 +40,7 @@ function CartWindow() {
                     </Grid>
                     
                     <div className='cartbutton'>
-                    <Button variant="outlined" onClick={() => {setCart(Cart.filter((a) => {return ( a.name!=val.name)} ))}} > Delete from Cart </Button>
+                    <Button variant="outlined" onClick={() => {setCart(Cart.filter((a) => {return ( a.name!==val.name)} ))}} > Delete from Cart </Button>
 
                     </div>
                     </Grid > 
