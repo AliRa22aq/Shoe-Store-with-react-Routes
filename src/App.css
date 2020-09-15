@@ -171,14 +171,33 @@ text-justify: auto;
 .cartprice{
   font-weight: 500;
   font-size: 1.25rem;
-  padding-top: 7rem ;
+  padding-top: 15rem ;
   padding-left: 4rem ;
+  align-self: center;
   display: flex; 
+  text-align: center;
+}
+
+.cartx{
+  font-weight: 500;
+  font-size: 1.25rem;
+  display: flex; 
+  padding-top: 10rem ;
+  padding-left: 6rem ;
 }
 
 .cartbutton {
-  padding: 3rem ;
+  padding: 3.5rem ;
   align-self: center;
+  display: flex; 
+
+}
+.cartDeletebutton {
+  padding-left: 2.5rem ;
+  padding-bottom: 5rem ;
+  align-self: center;
+  display: flex; 
+
 }
 .carttotal{
   background-color: whitesmoke;
