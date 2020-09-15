@@ -1,18 +1,13 @@
 import React, {useContext} from 'react'
-import {CartContext} from './CartContext'
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
-
+import {GlobalContext} from './CartContext'
 
 function Cart() {
-
-    const [Cart, setCart] = useContext(CartContext);
-    setCart(Cart)
-
-    //const totalPrice = priceData.reduce((acc, curr) => acc+curr, 0);
+    const {cart} = useContext(GlobalContext);
 
     return (
         <div style={{fontSize: 15}} >
-            <LocalGroceryStoreIcon/> {'('} {Cart.length} {')'}
+            <LocalGroceryStoreIcon/> {cart.length}
         </div>
     )
 
